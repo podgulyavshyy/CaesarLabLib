@@ -19,6 +19,7 @@ char DecryptChar(char a, int key){
 }
 
 char EncryptChar(char a, int key){
+    a = tolower(a);
     const std::string albet{"abcdefghijklmnopqrstuvwxyz"};
     int i = 0;
     while(a != albet[i]){
@@ -32,4 +33,21 @@ char EncryptChar(char a, int key){
         key -= 25;
     }
     return albet[key];
+}
+
+std::string Encrypt(std::string text, int key) {
+    std::string encrypted;
+    for (int i = 0; i < text.length(); i++) {
+        encrypted += EncryptChar(text[i], key);
+    }
+    return encrypted;
+}
+
+
+std::string Decrypt(std::string text, int key) {
+    std::string encrypted;
+    for (int i = 0; i < text.length(); i++) {
+        encrypted += DecryptChar(text[i], key);
+    }
+    return encrypted;
 }
