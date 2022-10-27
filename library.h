@@ -1,0 +1,6 @@
+#ifndef SHAREDCAESAR_LIBRARY_H
+#define SHAREDCAESAR_LIBRARY_H
+
+void hello();
+
+#endif //SHAREDCAESAR_LIBRARY_H
