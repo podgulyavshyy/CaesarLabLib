@@ -52,5 +52,5 @@ Mkfile.old
 dkms.conf
 
 .idea/
-
+.DS_store
 cmake-build-debug/
