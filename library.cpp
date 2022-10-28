@@ -2,6 +2,9 @@
 #include <iostream>
 
 char DecryptChar(char a, int key){
+    if (std::ispunct(a)){
+        return a;
+    }
     a = tolower(a);
     const std::string albet{"abcdefghijklmnopqrstuvwxyz"};
     int i = 0;
@@ -19,6 +22,9 @@ char DecryptChar(char a, int key){
 }
 
 char EncryptChar(char a, int key){
+    if (std::ispunct(a)){
+        return a;
+    }
     a = tolower(a);
     const std::string albet{"abcdefghijklmnopqrstuvwxyz"};
     int i = 0;
